@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>パク・ヨンジェ &amp; クォン・ナヒョン 結婚式のご案内</title>
+<meta property="og:title" content="パク・ヨンジェ ＆ クォン・ナヒョン 結婚式のご案内">
+<meta property="og:description" content="2026年10月31日(土) 午後3時30分 蔚山タニベイホテル">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-dark: #3b3222;
+    --bg-dark-2: #322b1d;
+    --cream: #f4efe4;
+    --cream-dim: #cfc6b0;
+    --line: rgba(244,239,228,0.22);
+    --accent: #c98a5e;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background: var(--cream);
+    color: var(--cream);
+    font-family: "Noto Serif JP", serif;
+    -webkit-font-smoothing: antialiased;
+    max-width: 480px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+  .en{ font-family: "Cormorant Garamond", serif; }
+
+  /* ---------- HEADER ---------- */
+  .topbar{
+    position: fixed;
+    top: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 480px;
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 22px 24px;
+    z-index: 50;
+    color: var(--cream);
+    font-family:"Cormorant Garamond", serif;
+    letter-spacing: 0.12em;
+    font-size: 13px;
+    pointer-events:none;
+  }
+  .topbar span{ opacity:0.9; }
+
+  /* ---------- KV ---------- */
+  .kv{
+    position:relative;
+    width:100%;
+    height: 100vh;
+    min-height: 640px;
+    overflow:hidden;
+    background: #2c2c2a;
+  }
+  .kv img{
+    width:100%; height:100%; object-fit:cover;
+    display:block;
+  }
+  .kv-eyebrow{
+    position:absolute; top:26px; left:0; right:0;
+    text-align:center;
+    font-family:"Cormorant Garamond", serif;
+    letter-spacing:0.35em;
+    font-size:12px;
+    color:#f4efe4;
+    opacity:0.85;
+    text-transform:uppercase;
+  }
+  .kv-caption{
+    position:absolute; left:0; right:0; bottom: 34px;
+    text-align:center;
+    color:#fff;
+    text-shadow: 0 2px 18px rgba(0,0,0,0.45);
+  }
+  .kv-caption .names{
+    font-family:"Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight:500;
+    font-size: 30px;
+    letter-spacing:0.02em;
+    margin-bottom: 10px;
+  }
+  .kv-caption .amp{ opacity:0.75; padding:0 6px; }
+  .kv-caption .sub{
+    font-family:"Noto Serif JP", serif;
+    font-size: 12.5px;
+    letter-spacing:0.08em;
+    opacity:0.92;
+    line-height:1.9;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{
+    background: var(--bg-dark);
+    padding: 70px 30px;
+    text-align:center;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+  }
+  section.alt{ background: var(--bg-dark-2); }
+  .eyebrow{
+    font-family:"Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: var(--cream-dim);
+    margin-bottom: 18px;
+  }
+  h2{
+    font-family:"Noto Serif JP", serif;
+    font-weight:500;
+    font-size: 24px;
+    letter-spacing: 0.06em;
+    margin-bottom: 34px;
+  }
+  .lead{
+    font-size: 14px;
+    line-height: 2.15;
+    color: var(--cream);
+    font-weight:300;
+    margin-bottom: 30px;
+  }
+  .names-block{
+    font-family:"Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 17px;
+    letter-spacing: 0.04em;
+    line-height: 2.1;
+    color: var(--cream);
+  }
+
+  /* couple names row */
+  .couple-row{
+    display:flex; justify-content:center; gap: 46px;
+    margin-bottom: 40px;
+  }
+  .couple-row div{ font-size:13px; letter-spacing:0.04em; color:var(--cream-dim); }
+  .couple-row .role{ display:block; font-family:"Cormorant Garamond", serif; font-style:italic; font-size:12px; margin-bottom:6px; letter-spacing:0.2em; text-transform:uppercase; opacity:0.7;}
+  .couple-row .name{ display:block; font-size:16px; color:var(--cream); }
+
+  /* date block */
+  .date-num{
+    font-family:"Cormorant Garamond", serif;
+    font-size: 40px;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  .date-sub{
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    color: var(--cream-dim);
+    margin-bottom: 34px;
+  }
+  .divider{
+    width: 44px; height:1px; background: var(--line);
+    margin: 0 auto 34px;
+  }
+
+  /* calendar */
+  table.cal{ width:100%; border-collapse:collapse; margin-bottom: 12px;}
+  table.cal th, table.cal td{
+    text-align:center; padding: 9px 0;
+    font-size: 12.5px;
+    font-family:"Cormorant Garamond", serif;
+    color: var(--cream-dim);
+  }
+  table.cal th{ letter-spacing:0.05em; opacity:0.75; font-weight:500;}
+  table.cal td.sat, table.cal th.sat{ color:#c98a6b; }
+  table.cal td.today{
+    position:relative; color:#3b3222; font-weight:600;
+  }
+  table.cal td.today span{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:28px; height:28px; border-radius:50%;
+    background: var(--cream-dim);
+  }
+
+  /* info cards (shuttle bus) */
+  .card{
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 20px 20px;
+    text-align:left;
+    margin-bottom: 14px;
+  }
+  .card .card-title{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:15px;
+    letter-spacing:0.03em;
+    margin-bottom: 10px;
+    color: var(--cream);
+  }
+  .card p{
+    font-size:13px; line-height:1.9; color: var(--cream-dim); font-weight:300;
+  }
+  .card ul{ list-style:none; }
+  .card li{ font-size:13px; line-height:1.95; color: var(--cream-dim); font-weight:300; }
+
+  /* gallery */
+  .gallery{
+    display:grid; grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    margin-bottom: 8px;
+  }
+  .gallery .cell{
+    aspect-ratio: 3/4;
+    background: linear-gradient(135deg,#efe9db,#e3ddcb);
+    display:flex; align-items:center; justify-content:center;
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:12px;
+    color:#a89e88;
+  }
+  .gallery img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+  /* location */
+  .venue-name{ font-size:18px; letter-spacing:0.04em; margin-bottom:8px; }
+  .venue-addr{ font-size:13px; color: var(--cream-dim); margin-bottom:4px; font-weight:300;}
+  .venue-note{ font-size:12px; color: var(--cream-dim); opacity:0.75; margin-bottom:26px; font-weight:300;}
+
+  .map-box{
+    width:100%; height:180px; border-radius:6px; overflow:hidden;
+    margin-bottom:22px; border:1px solid var(--line);
+  }
+  .map-box iframe{ width:100%; height:100%; border:0; filter: grayscale(0.15) sepia(0.08); }
+
+  .map-links{ display:flex; justify-content:center; gap:10px; margin-bottom: 34px; flex-wrap:wrap;}
+  .map-links a{
+    font-size:12px; color: var(--cream);
+    border:1px solid var(--line); border-radius: 20px;
+    padding: 9px 16px;
+    text-decoration:none;
+    letter-spacing:0.03em;
+  }
+
+  .info-block{ text-align:left; margin-bottom: 22px; }
+  .info-block h4{
+    font-size:13px; letter-spacing:0.05em; margin-bottom:10px; color: var(--cream);
+  }
+  .info-block p{
+    font-size:12.5px; line-height:1.95; color: var(--cream-dim); font-weight:300; margin-bottom: 4px;
+  }
+
+  /* contact */
+  .contact-row{
+    display:flex; align-items:center; justify-content:space-between;
+    border-top:1px solid var(--line);
+    padding: 16px 4px;
+    font-size:13.5px;
+    letter-spacing:0.02em;
+  }
+  .contact-row:last-child{ border-bottom:1px solid var(--line); }
+  .contact-row .icons{ display:flex; gap:14px; opacity:0.85; font-size:15px; }
+  .contact-row .icons a{ color:var(--cream); text-decoration:none; }
+
+  /* account */
+  .account-note{
+    font-size:13px; line-height:2.1; color: var(--cream-dim); font-weight:300;
+    margin-bottom: 26px;
+  }
+  .account-btn{
+    display:inline-block;
+    border:1px solid var(--line);
+    border-radius: 24px;
+    padding: 13px 30px;
+    font-size:12.5px;
+    letter-spacing:0.08em;
+    color:var(--cream);
+    text-decoration:none;
+  }
+
+  /* thank you */
+  .thankyou{
+    padding: 90px 30px 60px;
+    text-align:center;
+    background: var(--bg-dark-2);
+  }
+  .thankyou .en{ font-size:22px; font-style:italic; margin-bottom:14px; }
+  .heart{ font-size:14px; opacity:0.8; }
+
+  footer{
+    background:#241f15;
+    color: rgba(244,239,228,0.4);
+    text-align:center;
+    font-size:10.5px;
+    letter-spacing:0.15em;
+    padding: 22px;
+  }
+
+  /* small print for editable placeholders */
+  .todo{
+    color:#c98a5e; font-size:11px; font-style:italic;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><span class="en">WE'RE GETTING MARRIED</span><span>≡</span></div>
+
+<!-- KV -->
+<div class="kv">
+  <img src="images/kv.jpg" alt="パク・ヨンジェ ＆ クォン・ナヒョン">
+  <div class="kv-eyebrow">CELEBRATE OUR LOVE</div>
+  <div class="kv-caption">
+    <div class="names en">パク・ヨンジェ <span class="amp">&amp;</span> クォン・ナヒョン</div>
+    <div class="sub">
+      2026年10月31日(土) 午後3時30分<br>
+      蔚山タニベイホテル
+    </div>
+  </div>
+</div>
+
+<!-- INVITATION -->
+<section>
+  <div class="eyebrow en">wedding invitation</div>
+  <h2>結婚いたします</h2>
+  <p class="lead">
+    愛を育み、ひとつになろうとしています。<br>
+    これまで見守ってくださった皆様と<br>
+    親族の方々をお迎えし、誓いの言葉を交わします。<br>
+    ご多用中とは存じますが、ぜひご出席いただき<br>
+    温かく見守っていただけましたら<br>
+    この上ない喜びに存じます。
+  </p>
+  <div class="names-block">
+    新郎　パク・ヨンジェ<br>
+    新婦　クォン・ナヒョン
+  </div>
+</section>
+
+<!-- DATE / CALENDAR -->
+<section class="alt">
+  <div class="date-num en">2026.10.31</div>
+  <div class="date-sub">土曜日 午後3時30分</div>
+  <div class="divider"></div>
+  <table class="cal">
+    <tr>
+      <th class="sat">日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="sat">土</th>
+    </tr>
+    <tr><td></td><td></td><td></td><td class="sat">&nbsp;</td><td>1</td><td>2</td><td class="sat">3</td></tr>
+    <tr><td class="sat">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td class="sat">10</td></tr>
+    <tr><td class="sat">11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td class="sat">17</td></tr>
+    <tr><td class="sat">18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td class="sat">24</td></tr>
+    <tr><td class="sat">25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td class="today sat"><span>31</span></td></tr>
+  </table>
+</section>
+
+<!-- INFO / SHUTTLE BUS -->
+<section>
+  <div class="eyebrow en">wedding invitation</div>
+  <h2>ご案内</h2>
+
+  <div class="card">
+    <div class="card-title">貸切バスのご案内</div>
+    <p>ソウルから会場までお越しいただく皆様のために、<br>貸切バスをご用意しました。<br>下記をご確認のうえご利用ください。</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">往路バス</div>
+    <ul>
+      <li>出発時刻：9:00</li>
+      <li>出発場所：ハクトン（鶴洞）駅 6番出口</li>
+      <li>車両番号：京畿76자3097</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">復路バス</div>
+    <ul>
+      <li>出発時刻：17:30頃</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="alt">
+  <div class="eyebrow en">wedding invitation</div>
+  <h2>お祝いのご連絡先</h2>
+  <div>
+    <div class="contact-row">
+      <span>新婦　クォン・ナヒョン</span>
+      <span class="icons"><a href="tel:" class="todo">☎</a><a href="sms:" class="todo">✉</a></span>
+    </div>
+    <div class="contact-row">
+      <span>新婦の父　クォン・チャンイル</span>
+      <span class="icons"><a href="tel:" class="todo">☎</a><a href="sms:" class="todo">✉</a></span>
+    </div>
+  </div>
+  <p class="todo" style="display:block;margin-top:14px;">※ 電話番号のリンク（tel:）は実際の番号に差し替えてください</p>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <div class="eyebrow en">wedding invitation</div>
+  <h2>ギャラリー</h2>
+  <div class="gallery">
+    <div class="cell">Photo</div>
+    <div class="cell">Photo</div>
+    <div class="cell">Photo</div>
+    <div class="cell">Photo</div>
+    <div class="cell">Photo</div>
+    <div class="cell">Photo</div>
+  </div>
+  <p class="todo" style="display:block;margin-top:14px;">※ ギャラリー写真は images フォルダに追加後、上のセルを &lt;img&gt; タグに差し替えてください</p>
+</section>
+
+<!-- LOCATION -->
+<section class="alt">
+  <div class="eyebrow en">wedding invitation</div>
+  <h2>アクセス</h2>
+  <div class="venue-name">蔚山タニベイホテル</div>
+  <div class="venue-addr">울산 동구 해수욕장5길 43</div>
+  <div class="venue-note">（タクシー・ナビ入力の際は上記の韓国語住所をご利用ください）</div>
+
+  <div class="map-links">
+    <a href="https://maps.google.com/?q=울산+동구+해수욕장5길+43" target="_blank">Google Maps ↗</a>
+    <a href="https://map.naver.com/p/search/울산 동구 해수욕장5길 43" target="_blank">네이버 지도 ↗</a>
+    <a href="https://map.kakao.com/?q=울산 동구 해수욕장5길 43" target="_blank">카카오맵 ↗</a>
+  </div>
+
+  <div class="info-block">
+    <h4>■ 公共交通機関</h4>
+    <p>市外高速バスターミナルから<br>1411番（ヒュモンシアアパート下車 372m）</p>
+    <p>134, 711, 1134, 731番（イルサン海水浴場下車 663m）</p>
+    <p style="margin-top:10px;">蔚山駅（KTX）から<br>急行5002番（イルサン海水浴場下車 810m）</p>
+    <p style="margin-top:10px;">蔚山空港から<br>112, 122, 142番（テワンアム公園入口下車 663m）</p>
+  </div>
+
+  <div class="info-block">
+    <h4>■ お車でお越しの方</h4>
+    <p>カーナビ検索：「タニベイホテル」または「울산 동구 해수욕장5길 43」</p>
+    <p style="margin-top:10px;">駐車：無料／ホテル駐車場をご利用いただけます</p>
+  </div>
+</section>
+
+<!-- ACCOUNT -->
+<section>
+  <div class="eyebrow en">account</div>
+  <h2>心ばかりのお祝いについて</h2>
+  <p class="account-note">
+    皆様にお越しいただけること自体が<br>
+    私たちにとって何よりの贈り物です。<br><br>
+    もしお気持ちをお寄せいただける場合は、<br>
+    お手数ですが下記よりお問い合わせください。
+  </p>
+  <a href="#" class="account-btn todo">お振込先をお問い合わせ</a>
+</section>
+
+<!-- THANK YOU -->
+<div class="thankyou">
+  <div class="en">Thank you!</div>
+  <div class="heart">♥</div>
+</div>
+
+<footer>WEDDING INVITATION</footer>
+
+</body>
+</html>

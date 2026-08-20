@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
   :root{
@@ -39,7 +39,7 @@
     -webkit-font-smoothing:antialiased;
     max-width: 480px; margin:0 auto; overflow-x:hidden;
   }
-  body[data-lang="jp"]{ font-family:"Noto Sans JP", "Pretendard", "Noto Sans KR", sans-serif; }
+  body[data-lang="jp"]{ font-family:"Noto Serif JP", serif; }
   body::after{
     content:"";
     position:fixed; inset:0; z-index:9999; pointer-events:none;
@@ -151,8 +151,8 @@
   .card .card-title{ font-style:normal; font-size:15px; font-weight:500; color:var(--gold); margin-bottom:10px; }
   .card p, .card li{ font-size:13.5px; line-height:1.95; color:var(--ivory-dim); font-weight:400; list-style:none; }
 
-  .bus-row{ display:flex; gap:14px; padding:12px 0; border-top:1px solid var(--line); }
-  .bus-row:first-of-type{ border-top:none; padding-top:2px; }
+  .bus-row{ display:flex; gap:14px; padding:8px 0; }
+  .bus-row:first-of-type{ margin-top:14px; }
   .bus-tag{
     flex:0 0 auto; align-self:flex-start;
     font-size:11px; letter-spacing:0.05em; font-weight:600;
@@ -164,7 +164,14 @@
 
   /* grid gallery */
   .gallery-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:4px; margin-bottom:6px; }
-  .gallery-grid img{ width:100%; aspect-ratio:3/4; object-fit:cover; display:block; }
+  .gallery-grid img{ width:100%; aspect-ratio:3/4; object-fit:cover; display:block; cursor:zoom-in; }
+  .lightbox{ display:none; position:fixed; inset:0; z-index:10000; background:rgba(22,26,30,0.94); align-items:center; justify-content:center; padding:16px; }
+  .lightbox.open{ display:flex; }
+  .lightbox img{ max-width:100%; max-height:100%; object-fit:contain; border-radius:4px; }
+  .lb-close,.lb-arrow{ position:fixed; color:#fff; cursor:pointer; user-select:none; z-index:10001; opacity:0.85; }
+  .lb-close{ top:14px; right:18px; font-size:26px; }
+  .lb-arrow{ top:50%; transform:translateY(-50%); font-size:42px; padding:8px 12px; }
+  .lb-prev{ left:4px; } .lb-next{ right:4px; }
 
   .venue-name{ font-size:18px; letter-spacing:0.04em; margin-bottom:8px; color:#fff; }
   .venue-addr{ font-size:13px; color:var(--ivory-dim); margin-bottom:4px; font-weight:300; }
@@ -179,8 +186,9 @@
 
   .contact-row{ display:flex; align-items:center; justify-content:space-between; border-top:1px solid var(--line); padding:16px 4px; font-size:13.5px; }
   .contact-row:last-child{ border-bottom:1px solid var(--line); }
-  .contact-row .icons{ display:flex; gap:14px; opacity:0.85; font-size:15px; }
-  .contact-row .icons a{ color:var(--ivory); text-decoration:none; }
+  .contact-row .icons{ display:flex; gap:18px; align-items:center; }
+  .contact-row .icons a{ color:var(--ivory); text-decoration:none; display:inline-flex; align-items:center; opacity:0.8; }
+  .contact-row .icons svg.ic{ width:18px; height:18px; fill:currentColor; display:block; }
 
   .account-note{ font-size:13.5px; line-height:2.1; color:var(--ivory-dim); font-weight:400; margin-bottom:22px; }
   .account-btn{ display:inline-block; border:1px solid var(--gold); color:var(--gold); border-radius:24px; padding:13px 30px; font-size:12.5px; letter-spacing:0.06em; text-decoration:none; }
@@ -202,11 +210,10 @@
   .thankyou .en{ font-size:22px; font-style:normal; margin-bottom:14px; color:var(--ivory); }
   .heart{ font-size:14px; color:var(--gold); }
   .share{ background:var(--wine-deep); text-align:center; padding:0 30px 56px; }
-  .kakao-btn{ all:unset; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:8px;
-    background:#FEE500; color:#3a1d1d; font-size:13.5px; font-weight:600; letter-spacing:0.02em;
-    padding:14px 26px; border-radius:16px; }
-  .kakao-btn:active{ opacity:0.85; }
-  .kakao-btn svg{ width:19px; height:19px; }
+  .kakao-btn{ all:unset; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;
+    background:#fff; color:#33414d; font-size:12.5px; font-weight:500; letter-spacing:0.02em;
+    padding:12px 26px; border-radius:24px; border:1px solid #cdd8e2; }
+  .kakao-btn:active{ opacity:0.8; }
 
   footer{ background:var(--wine-deep); color:rgba(52,66,78,0.55); text-align:center; font-size:10.5px; letter-spacing:0.15em; padding:22px; }
 
@@ -265,6 +272,11 @@
 </style>
 </head>
 <body data-lang="jp">
+
+<svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs>
+<symbol id="ic-phone" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
+<symbol id="ic-msg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+</defs></svg>
 
 <div class="topbar">
   <span class="brand en">W &amp; B</span>
@@ -338,10 +350,6 @@
       <span class="kr">서울에서 오시는 하객분들을 위해 전세버스를 준비했습니다.<br>이용하실 분은 신랑신부에게 연락주세요.</span>
       <span class="jp">ソウルから会場までお越しいただく皆様のために、貸切バスをご用意しました。<br>ご利用希望の方は新郎新婦までご連絡ください。</span>
     </p>
-  </div>
-
-  <div class="card">
-    <div class="card-title"><span class="kr">전세버스 시간표</span><span class="jp">貸切バス 時刻表</span></div>
     <div class="bus-row">
       <div class="bus-tag go"><span class="kr">출발</span><span class="jp">往路</span></div>
       <ul>
@@ -376,30 +384,30 @@
   <div class="kr">
     <div class="contact-row">
       <span>신랑 박영재</span>
-      <span class="icons"><a href="tel:" class="todo">☎</a><a href="sms:" class="todo">✉</a></span>
+      <span class="icons"><a href="tel:01096921298" aria-label="전화"><svg class="ic"><use href="#ic-phone"/></svg></a><a href="sms:01096921298" aria-label="문자"><svg class="ic"><use href="#ic-msg"/></svg></a></span>
     </div>
     <div class="contact-row">
       <span>혼주 권효주</span>
-      <span class="icons"><a href="tel:" class="todo">☎</a><a href="sms:" class="todo">✉</a></span>
+      <span class="icons"><a href="tel:01096260729" aria-label="전화"><svg class="ic"><use href="#ic-phone"/></svg></a><a href="sms:01096260729" aria-label="문자"><svg class="ic"><use href="#ic-msg"/></svg></a></span>
     </div>
     <div class="contact-row">
       <span>신부 권나현</span>
-      <span class="icons"><a href="tel:" class="todo">☎</a><a href="sms:" class="todo">✉</a></span>
+      <span class="icons"><a href="tel:01077088674" aria-label="전화"><svg class="ic"><use href="#ic-phone"/></svg></a><a href="sms:01077088674" aria-label="문자"><svg class="ic"><use href="#ic-msg"/></svg></a></span>
     </div>
     <div class="contact-row">
       <span>혼주 권창일</span>
-      <span class="icons"><a href="tel:" class="todo">☎</a><a href="sms:" class="todo">✉</a></span>
+      <span class="icons"><a href="tel:01025478674" aria-label="전화"><svg class="ic"><use href="#ic-phone"/></svg></a><a href="sms:01025478674" aria-label="문자"><svg class="ic"><use href="#ic-msg"/></svg></a></span>
     </div>
   </div>
 
   <div class="jp">
     <div class="contact-row">
       <span>新郎　パクヨンジェ</span>
-      <span class="icons"><a href="tel:07084623632">☎</a><a href="sms:07084623632">✉</a></span>
+      <span class="icons"><a href="tel:07084623632" aria-label="電話"><svg class="ic"><use href="#ic-phone"/></svg></a><a href="sms:07084623632" aria-label="メッセージ"><svg class="ic"><use href="#ic-msg"/></svg></a></span>
     </div>
     <div class="contact-row">
       <span>新婦　グォンナヒョン</span>
-      <span class="icons"><a href="tel:09058943676">☎</a><a href="sms:09058943676">✉</a></span>
+      <span class="icons"><a href="tel:09058943676" aria-label="電話"><svg class="ic"><use href="#ic-phone"/></svg></a><a href="sms:09058943676" aria-label="メッセージ"><svg class="ic"><use href="#ic-msg"/></svg></a></span>
     </div>
   </div>
 </section>
@@ -469,11 +477,18 @@
 
   <div class="info-block">
     <h4 class="icon-head"><span class="ic">🚗</span><span class="kr">자가용</span><span class="jp">お車でお越しの方</span></h4>
-    <p><span class="kr">네비게이션 : '타니베이 호텔' 또는 '울산 동구 해수욕장5길 43'</span>
+    <p><span class="kr">네비게이션 : '타니베이 호텔' 또는 '울산 동구 해수욕장 5길 43'</span>
        <span class="jp">カーナビ検索：「Tanibay Hotel &amp; Wedding」または「울산 동구 해수욕장5길 43」</span></p>
-    <p style="margin-top:10px;"><span class="kr">① 타 지역 출발 시: 울산대교 고속도로 진입 → 염포산터널 출차 → 일산해수욕장 방향 직진<br>② 울산 시내 출발 시: 아산로 직진 → 방어동/일산해수욕장 방면 진입</span>
-       <span class="jp">①他地域から：蔚山大橋高速道路に進入 → 塩浦山トンネルを出て → イルサン海水浴場方面へ直進<br>②蔚山市内から：アサン路を直進 → バンオドン／イルサン海水浴場方面へ進入</span></p>
-    <p style="margin-top:10px;"><span class="kr">주차 안내 : 무료 / 호텔 주차장</span><span class="jp">駐車：無料／ホテル駐車場をご利用いただけます</span></p>
+
+    <div class="sub-title"><span class="kr">타지역 출발 시</span><span class="jp">他地域から</span></div>
+    <p><span class="kr">울산대교 고속도로 진입 → 염포산터널 출차 → 일산해수욕장 방향 직진</span>
+       <span class="jp">蔚山大橋高速道路に進入 → 塩浦山トンネルを出て → イルサン海水浴場方面へ直進</span></p>
+
+    <div class="sub-title"><span class="kr">울산 시내 출발 시</span><span class="jp">蔚山市内から</span></div>
+    <p><span class="kr">아산로 직진 → 방어동/일산해수욕장 방면 진입</span>
+       <span class="jp">アサン路を直進 → バンオドン／イルサン海水浴場方面へ進入</span></p>
+
+    <p style="margin-top:14px;"><span class="kr">※ 주차는 호텔 주차장 무료 이용 가능</span><span class="jp">※ 駐車はホテル駐車場を無料でご利用いただけます</span></p>
   </div>
 </section>
 
@@ -546,10 +561,17 @@
 <!-- SHARE -->
 <div class="share">
   <button class="kakao-btn" onclick="shareInvitation()">
-    <svg viewBox="0 0 24 24" fill="#3a1d1d" aria-hidden="true"><path d="M12 3C6.48 3 2 6.62 2 11.05c0 2.86 1.9 5.37 4.76 6.79-.16.55-.9 3.1-.93 3.31 0 0-.02.15.08.21.1.06.22.01.22.01.29-.04 3.36-2.2 3.89-2.57.63.09 1.29.14 1.98.14 5.52 0 10-3.62 10-8.05C22 6.62 17.52 3 12 3z"/></svg>
-    <span class="kr">카카오톡으로 공유하기</span>
-    <span class="jp">カカオトークで共有</span>
+    <span class="kr">카카오톡으로 공유하기 ↗</span>
+    <span class="jp">カカオトークで共有 ↗</span>
   </button>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="lb-arrow lb-prev" onclick="lbNav(-1,event)">‹</span>
+  <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+  <span class="lb-arrow lb-next" onclick="lbNav(1,event)">›</span>
+  <span class="lb-close" onclick="closeLightbox()">✕</span>
 </div>
 
 <footer><span class="kr">WEDDING INVITATION</span><span class="jp">WEDDING INVITATION</span></footer>
@@ -570,7 +592,7 @@
   }
 
   function shareInvitation(){
-    const url = (SHARE_URL.indexOf('YOUR-') === -1) ? SHARE_URL : location.href;
+    const url = location.href; // 현재 보고 있는 언어(?lang=)를 그대로 공유
     if(window.Kakao && Kakao.isInitialized && Kakao.isInitialized()){
       Kakao.Share.sendDefault({
         objectType:'feed',
@@ -595,7 +617,19 @@
     document.body.setAttribute('data-lang', lang);
     document.getElementById('btn-kr').classList.toggle('active', lang==='kr');
     document.getElementById('btn-jp').classList.toggle('active', lang==='jp');
+    try {
+      var u = new URL(window.location.href);
+      u.searchParams.set('lang', lang);
+      history.replaceState(null, '', u);
+    } catch(e){}
   }
+
+  // URL 의 ?lang= 값으로 초기 언어 결정 (공유 시 보던 언어가 그대로 열림)
+  (function initLang(){
+    var lang = new URLSearchParams(window.location.search).get('lang');
+    if(lang !== 'kr' && lang !== 'jp'){ lang = document.body.getAttribute('data-lang') || 'jp'; }
+    setLang(lang);
+  })();
 
   function copyAccount(btn, number){
     const done = () => {
@@ -625,6 +659,18 @@
     try { document.execCommand('copy'); cb(); } catch(e) {}
     document.body.removeChild(ta);
   }
+
+  // ---- Gallery lightbox ----
+  var galleryImgs = Array.prototype.slice.call(document.querySelectorAll('.gallery-grid img'));
+  var lbIndex = 0;
+  function showLb(i){
+    lbIndex = (i + galleryImgs.length) % galleryImgs.length;
+    document.getElementById('lightbox-img').src = galleryImgs[lbIndex].getAttribute('src');
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox(){ document.getElementById('lightbox').classList.remove('open'); }
+  function lbNav(dir, ev){ if(ev){ ev.stopPropagation(); } showLb(lbIndex + dir); }
+  galleryImgs.forEach(function(im, i){ im.addEventListener('click', function(){ showLb(i); }); });
 </script>
 
 </body>

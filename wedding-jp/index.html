@@ -623,7 +623,7 @@
       return;
     }
     if(navigator.share){
-      navigator.share({ title:SHARE_TITLE, text:'결혼식에 초대합니다', url:url }).catch(function(){});
+      navigator.share({ url:url }).catch(function(){});
       return;
     }
     if(navigator.clipboard){ navigator.clipboard.writeText(url); alert('링크가 복사되었습니다.'); }

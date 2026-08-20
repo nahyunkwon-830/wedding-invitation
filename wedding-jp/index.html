@@ -3,313 +3,286 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>パク・ヨンジェ &amp; クォン・ナヒョン 結婚式のご案内</title>
-<meta property="og:title" content="パク・ヨンジェ ＆ クォン・ナヒョン 結婚式のご案内">
-<meta property="og:description" content="2026年10月31日(土) 午後3時30分 蔚山タニベイホテル">
+<title>박영재 ・ 권나현 / パクヨンジェ ・ グォンナヒョン</title>
+<meta name="robots" content="noindex">
+<!-- 공유 미리보기(OG) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="박영재 ・ 권나현 결혼합니다">
+<meta property="og:description" content="2026년 10월 31일 (토) 오후 3시 30분 · 타니베이 호텔 해루홀">
+<meta property="og:image" content="https://nahyunkwon-830.github.io/wedding-invitation/wedding-jp/images/kv.jpg">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1620">
+<meta property="og:url" content="https://nahyunkwon-830.github.io/wedding-invitation/wedding-jp/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
   :root{
-    --bg-dark: #3b3222;
-    --bg-dark-2: #322b1d;
-    --cream: #f4efe4;
-    --cream-dim: #cfc6b0;
-    --line: rgba(244,239,228,0.22);
-    --accent: #c98a5e;
+    --wine: #f9fafb;
+    --wine-deep: #dfe7ee;
+    --ivory: #33414d;
+    --ivory-dim: #5c6c77;
+    --line: rgba(52,66,78,0.14);
+    --gold: #4a7188;
+    --kv-text: #f7f8fa;
+    --kv-text-dim: rgba(247,249,251,0.9);
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
   body{
-    background: var(--cream);
-    color: var(--cream);
-    font-family: "Noto Serif JP", serif;
-    -webkit-font-smoothing: antialiased;
-    max-width: 480px;
-    margin: 0 auto;
-    overflow-x: hidden;
+    position:relative;
+    background: var(--wine);
+    color: var(--ivory);
+    font-family: "Pretendard", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing:antialiased;
+    max-width: 480px; margin:0 auto; overflow-x:hidden;
   }
-  .en{ font-family: "Cormorant Garamond", serif; }
+  body[data-lang="jp"]{ font-family:"Noto Sans JP", "Pretendard", "Noto Sans KR", sans-serif; }
+  body::after{
+    content:"";
+    position:fixed; inset:0; z-index:9999; pointer-events:none;
+    opacity:0.05; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .en{ font-family:"Cormorant Garamond", serif; }
 
-  /* ---------- HEADER ---------- */
+  /* language visibility */
+  body[data-lang="jp"] .kr{ display:none !important; }
+  body[data-lang="kr"] .jp{ display:none !important; }
+
+  /* ---------- TOPBAR + LANG SWITCH ---------- */
   .topbar{
-    position: fixed;
-    top: 0; left: 50%; transform: translateX(-50%);
-    width: 100%; max-width: 480px;
+    position:fixed; top:0; left:50%; transform:translateX(-50%);
+    width:100%; max-width:480px;
     display:flex; align-items:center; justify-content:space-between;
-    padding: 22px 24px;
-    z-index: 50;
-    color: var(--cream);
-    font-family:"Cormorant Garamond", serif;
-    letter-spacing: 0.12em;
-    font-size: 13px;
-    pointer-events:none;
+    padding:16px 22px; z-index:60;
+    color:var(--kv-text);
   }
-  .topbar span{ opacity:0.9; }
+  .topbar::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:130px;
+    background: linear-gradient(180deg,
+      rgba(46,48,50,0.55) 0%,
+      rgba(46,48,50,0.42) 25%,
+      rgba(46,48,50,0.27) 50%,
+      rgba(46,48,50,0.12) 75%,
+      rgba(46,48,50,0) 100%);
+    z-index:-1; pointer-events:none;
+  }
+  .brand{ font-family:"Cormorant Garamond", serif; font-style:normal; font-size:13px; letter-spacing:0.1em; opacity:0.9; text-shadow:0 1px 4px rgba(0,0,0,0.4); }
+  .lang-switch{
+    display:flex; background:rgba(46,48,50,0.45); border:1px solid rgba(247,242,234,0.7); border-radius:20px; overflow:hidden;
+    pointer-events:auto;
+  }
+  .lang-switch button{
+    all:unset; cursor:pointer;
+    font-family:"Cormorant Garamond", serif;
+    font-size:12px; letter-spacing:0.06em;
+    padding:6px 13px;
+    color: var(--kv-text); opacity:0.85;
+  }
+  .lang-switch button.active{ background: var(--kv-text); color: #2c2a28; opacity:1; font-weight:600; }
 
   /* ---------- KV ---------- */
   .kv{
-    position:relative;
-    width:100%;
-    height: 100vh;
-    min-height: 640px;
-    overflow:hidden;
-    background: #2c2c2a;
+    position:relative; width:100%; height:100vh; min-height:640px;
+    overflow:hidden; background:var(--wine-deep);
+    container-type: inline-size;
   }
-  .kv img{
-    width:100%; height:100%; object-fit:cover;
-    display:block;
-  }
+  .kv img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; }
+  .kv-content{ position:absolute; z-index:3; left:0; right:0; bottom:30px; text-align:center; padding-left:30px; padding-right:30px; }
   .kv-eyebrow{
-    position:absolute; top:26px; left:0; right:0;
-    text-align:center;
-    font-family:"Cormorant Garamond", serif;
-    letter-spacing:0.35em;
-    font-size:12px;
-    color:#f4efe4;
-    opacity:0.85;
-    text-transform:uppercase;
+    font-family:"Cormorant Garamond", serif; letter-spacing:0.4em; font-size:11px;
+    text-transform:uppercase; color:var(--kv-text); opacity:0.9; margin-bottom:18px;
   }
-  .kv-caption{
-    position:absolute; left:0; right:0; bottom: 34px;
-    text-align:center;
-    color:#fff;
-    text-shadow: 0 2px 18px rgba(0,0,0,0.45);
+  .kv-names{
+    font-family:"Cormorant Garamond", serif; font-style:normal; font-weight:500;
+    font-size: clamp(10px, 4.3cqw, 30px); color:#fff; text-shadow:0 2px 20px rgba(0,0,0,0.5); margin-bottom:14px;
+    white-space:nowrap; padding:0 4px;
   }
-  .kv-caption .names{
-    font-family:"Cormorant Garamond", serif;
-    font-style: italic;
-    font-weight:500;
-    font-size: 30px;
-    letter-spacing:0.02em;
-    margin-bottom: 10px;
+  .kv-names .amp{ opacity:0.7; padding:0 8px; }
+  .kv-sub{ font-size:12.5px; letter-spacing:0.06em; color:var(--kv-text-dim); line-height:1.9; }
+
+  /* polaroid frame for KV bottom card */
+  .polaroid{
+    position:absolute; left:50%; bottom:60px; transform:translateX(-50%) rotate(-2deg);
+    background:#fdfaf5; padding:10px 10px 34px; width:150px; box-shadow:0 14px 30px rgba(0,0,0,0.35);
+    z-index:4;
   }
-  .kv-caption .amp{ opacity:0.75; padding:0 6px; }
-  .kv-caption .sub{
-    font-family:"Noto Serif JP", serif;
-    font-size: 12.5px;
-    letter-spacing:0.08em;
-    opacity:0.92;
-    line-height:1.9;
+  .polaroid .ph{ width:100%; aspect-ratio:3/4; background:#eee; overflow:hidden; }
+  .polaroid .ph img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .polaroid .cap{
+    position:absolute; bottom:8px; left:0; right:0; text-align:center;
+    font-family:"Cormorant Garamond", serif; font-style:normal; font-size:11px; color:var(--gold);
   }
 
   /* ---------- SECTIONS ---------- */
   section{
-    background: var(--bg-dark);
-    padding: 70px 30px;
-    text-align:center;
-    border-bottom: 1px solid rgba(0,0,0,0.15);
+    background: var(--wine);
+    padding:74px 30px; text-align:center;
   }
-  section.alt{ background: var(--bg-dark-2); }
+  section.alt{ background: var(--wine-deep); }
   .eyebrow{
-    font-family:"Cormorant Garamond", serif;
-    font-style: italic;
-    font-size: 14px;
-    letter-spacing: 0.06em;
-    color: var(--cream-dim);
-    margin-bottom: 18px;
+    font-family:"Cormorant Garamond", serif; font-style:normal; font-size:14px;
+    letter-spacing:0.08em; color: var(--gold); margin-bottom:18px;
   }
-  h2{
-    font-family:"Noto Serif JP", serif;
-    font-weight:500;
-    font-size: 24px;
-    letter-spacing: 0.06em;
-    margin-bottom: 34px;
-  }
-  .lead{
-    font-size: 14px;
-    line-height: 2.15;
-    color: var(--cream);
-    font-weight:300;
-    margin-bottom: 30px;
-  }
+  h2{ font-weight:500; font-size:23px; letter-spacing:0.05em; margin-bottom:32px; color:var(--ivory); }
+  .lead{ font-size:14.5px; line-height:2.2; font-weight:400; color:var(--ivory-dim); margin-bottom:30px; }
   .names-block{
-    font-family:"Cormorant Garamond", serif;
-    font-style: italic;
-    font-size: 17px;
-    letter-spacing: 0.04em;
-    line-height: 2.1;
-    color: var(--cream);
+    font-style:normal; font-size:16px;
+    letter-spacing:0.04em; line-height:2.1;
   }
 
-  /* couple names row */
-  .couple-row{
-    display:flex; justify-content:center; gap: 46px;
-    margin-bottom: 40px;
-  }
-  .couple-row div{ font-size:13px; letter-spacing:0.04em; color:var(--cream-dim); }
-  .couple-row .role{ display:block; font-family:"Cormorant Garamond", serif; font-style:italic; font-size:12px; margin-bottom:6px; letter-spacing:0.2em; text-transform:uppercase; opacity:0.7;}
-  .couple-row .name{ display:block; font-size:16px; color:var(--cream); }
+  .date-num{ font-family:"Cormorant Garamond", serif; font-size:38px; letter-spacing:0.06em; color:var(--ivory); margin-bottom:10px; }
+  .date-sub{ font-size:13px; letter-spacing:0.05em; color:var(--ivory-dim); margin-bottom:32px; }
+  .divider{ width:44px; height:1px; background: var(--gold); opacity:0.5; margin:0 auto 32px; }
 
-  /* date block */
-  .date-num{
-    font-family:"Cormorant Garamond", serif;
-    font-size: 40px;
-    letter-spacing: 0.08em;
-    margin-bottom: 10px;
-  }
-  .date-sub{
-    font-size: 13px;
-    letter-spacing: 0.05em;
-    color: var(--cream-dim);
-    margin-bottom: 34px;
-  }
-  .divider{
-    width: 44px; height:1px; background: var(--line);
-    margin: 0 auto 34px;
-  }
-
-  /* calendar */
-  table.cal{ width:100%; border-collapse:collapse; margin-bottom: 12px;}
-  table.cal th, table.cal td{
-    text-align:center; padding: 9px 0;
-    font-size: 12.5px;
-    font-family:"Cormorant Garamond", serif;
-    color: var(--cream-dim);
-  }
-  table.cal th{ letter-spacing:0.05em; opacity:0.75; font-weight:500;}
-  table.cal td.sat, table.cal th.sat{ color:#c98a6b; }
-  table.cal td.today{
-    position:relative; color:#3b3222; font-weight:600;
-  }
+  table.cal{ width:100%; border-collapse:collapse; table-layout:fixed; margin-bottom:8px; }
+  table.cal th, table.cal td{ text-align:center; padding:9px 0; font-size:12.5px; font-family:"Cormorant Garamond", serif; color:var(--ivory-dim); }
+  table.cal th{ letter-spacing:0.05em; opacity:0.8; font-weight:500; }
+  table.cal td.sat, table.cal th.sat{ color:#e08a6f; }
   table.cal td.today span{
-    display:inline-flex; align-items:center; justify-content:center;
-    width:28px; height:28px; border-radius:50%;
-    background: var(--cream-dim);
+    display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%;
+    background: var(--gold); color:#fff; font-weight:600;
   }
 
-  /* info cards (shuttle bus) */
-  .card{
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    padding: 20px 20px;
-    text-align:left;
-    margin-bottom: 14px;
-  }
-  .card .card-title{
-    font-family:"Cormorant Garamond", serif;
-    font-style:italic;
-    font-size:15px;
-    letter-spacing:0.03em;
-    margin-bottom: 10px;
-    color: var(--cream);
-  }
-  .card p{
-    font-size:13px; line-height:1.9; color: var(--cream-dim); font-weight:300;
-  }
-  .card ul{ list-style:none; }
-  .card li{ font-size:13px; line-height:1.95; color: var(--cream-dim); font-weight:300; }
+  .card{ background: rgba(52,66,78,0.05); border-radius:16px; padding:20px; text-align:left; margin-bottom:14px; }
+  .card .card-title{ font-style:normal; font-size:15px; font-weight:500; color:var(--gold); margin-bottom:10px; }
+  .card p, .card li{ font-size:13.5px; line-height:1.95; color:var(--ivory-dim); font-weight:400; list-style:none; }
 
-  /* gallery */
-  .gallery{
-    display:grid; grid-template-columns: repeat(3, 1fr);
-    gap: 3px;
-    margin-bottom: 8px;
+  .bus-row{ display:flex; gap:14px; padding:12px 0; border-top:1px solid var(--line); }
+  .bus-row:first-of-type{ border-top:none; padding-top:2px; }
+  .bus-tag{
+    flex:0 0 auto; align-self:flex-start;
+    font-size:11px; letter-spacing:0.05em; font-weight:600;
+    padding:5px 13px; border-radius:14px; margin-top:1px;
   }
-  .gallery .cell{
-    aspect-ratio: 3/4;
-    background: linear-gradient(135deg,#efe9db,#e3ddcb);
-    display:flex; align-items:center; justify-content:center;
-    font-family:"Cormorant Garamond", serif;
-    font-style:italic;
-    font-size:12px;
-    color:#a89e88;
-  }
-  .gallery img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .bus-tag.go{ background:#d6e2ec; color:#3f6a80; }
+  .bus-tag.back{ background:#d6e2ec; color:#3f6a80; }
+  .bus-row ul{ flex:1; }
 
-  /* location */
-  .venue-name{ font-size:18px; letter-spacing:0.04em; margin-bottom:8px; }
-  .venue-addr{ font-size:13px; color: var(--cream-dim); margin-bottom:4px; font-weight:300;}
-  .venue-note{ font-size:12px; color: var(--cream-dim); opacity:0.75; margin-bottom:26px; font-weight:300;}
+  /* grid gallery */
+  .gallery-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:4px; margin-bottom:6px; }
+  .gallery-grid img{ width:100%; aspect-ratio:3/4; object-fit:cover; display:block; }
 
-  .map-box{
-    width:100%; height:180px; border-radius:6px; overflow:hidden;
-    margin-bottom:22px; border:1px solid var(--line);
-  }
-  .map-box iframe{ width:100%; height:100%; border:0; filter: grayscale(0.15) sepia(0.08); }
+  .venue-name{ font-size:18px; letter-spacing:0.04em; margin-bottom:8px; color:#fff; }
+  .venue-addr{ font-size:13px; color:var(--ivory-dim); margin-bottom:4px; font-weight:300; }
+  .venue-note{ font-size:12.5px; color:var(--ivory-dim); opacity:0.95; margin-bottom:26px; font-weight:400; }
 
-  .map-links{ display:flex; justify-content:center; gap:10px; margin-bottom: 34px; flex-wrap:wrap;}
-  .map-links a{
-    font-size:12px; color: var(--cream);
-    border:1px solid var(--line); border-radius: 20px;
-    padding: 9px 16px;
-    text-decoration:none;
-    letter-spacing:0.03em;
-  }
+  .map-links{ display:flex; justify-content:center; gap:10px; margin-bottom:34px; flex-wrap:wrap; }
+  .map-links a{ font-size:12px; color:var(--ivory); border:1px solid var(--line); border-radius:20px; padding:9px 16px; text-decoration:none; }
 
-  .info-block{ text-align:left; margin-bottom: 22px; }
-  .info-block h4{
-    font-size:13px; letter-spacing:0.05em; margin-bottom:10px; color: var(--cream);
-  }
-  .info-block p{
-    font-size:12.5px; line-height:1.95; color: var(--cream-dim); font-weight:300; margin-bottom: 4px;
-  }
+  .info-block{ text-align:left; margin-bottom:22px; }
+  .info-block h4{ font-size:14px; letter-spacing:0.03em; margin-bottom:12px; font-weight:700; color:var(--gold); }
+  .info-block p{ font-size:13px; line-height:2; color:var(--ivory-dim); font-weight:400; margin-bottom:4px; }
 
-  /* contact */
-  .contact-row{
-    display:flex; align-items:center; justify-content:space-between;
-    border-top:1px solid var(--line);
-    padding: 16px 4px;
-    font-size:13.5px;
-    letter-spacing:0.02em;
-  }
+  .contact-row{ display:flex; align-items:center; justify-content:space-between; border-top:1px solid var(--line); padding:16px 4px; font-size:13.5px; }
   .contact-row:last-child{ border-bottom:1px solid var(--line); }
   .contact-row .icons{ display:flex; gap:14px; opacity:0.85; font-size:15px; }
-  .contact-row .icons a{ color:var(--cream); text-decoration:none; }
+  .contact-row .icons a{ color:var(--ivory); text-decoration:none; }
 
-  /* account */
-  .account-note{
-    font-size:13px; line-height:2.1; color: var(--cream-dim); font-weight:300;
-    margin-bottom: 26px;
-  }
-  .account-btn{
-    display:inline-block;
-    border:1px solid var(--line);
-    border-radius: 24px;
-    padding: 13px 30px;
-    font-size:12.5px;
-    letter-spacing:0.08em;
-    color:var(--cream);
-    text-decoration:none;
-  }
+  .account-note{ font-size:13.5px; line-height:2.1; color:var(--ivory-dim); font-weight:400; margin-bottom:22px; }
+  .account-btn{ display:inline-block; border:1px solid var(--gold); color:var(--gold); border-radius:24px; padding:13px 30px; font-size:12.5px; letter-spacing:0.06em; text-decoration:none; }
 
-  /* thank you */
-  .thankyou{
-    padding: 90px 30px 60px;
-    text-align:center;
-    background: var(--bg-dark-2);
+  .acc-card{ background: rgba(52,66,78,0.05); border-radius:4px; padding:16px 18px; text-align:left; margin-bottom:12px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .acc-card .who{ font-size:13px; color:var(--gold); margin-bottom:6px; letter-spacing:0.03em; }
+  .acc-card .num{ font-size:13px; color:var(--ivory); font-weight:300; }
+  .acc-card .copy-btn{
+    all:unset; cursor:pointer; flex:0 0 auto;
+    width:34px; height:34px; border-radius:50%;
+    background: rgba(247,237,228,0.12);
+    display:flex; align-items:center; justify-content:center;
+    font-size:14px; color:var(--ivory); opacity:0.85;
   }
-  .thankyou .en{ font-size:22px; font-style:italic; margin-bottom:14px; }
-  .heart{ font-size:14px; opacity:0.8; }
+  .acc-card .copy-btn.copied{ background: var(--gold); color:#fff; opacity:1; }
+  .acc-card .copy-btn svg{ width:15px; height:15px; }
 
-  footer{
-    background:#241f15;
-    color: rgba(244,239,228,0.4);
-    text-align:center;
-    font-size:10.5px;
-    letter-spacing:0.15em;
-    padding: 22px;
-  }
+  .thankyou{ padding:90px 30px 34px; text-align:center; background:var(--wine-deep); }
+  .thankyou .en{ font-size:22px; font-style:normal; margin-bottom:14px; color:var(--ivory); }
+  .heart{ font-size:14px; color:var(--gold); }
+  .share{ background:var(--wine-deep); text-align:center; padding:0 30px 56px; }
+  .kakao-btn{ all:unset; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    background:#FEE500; color:#3a1d1d; font-size:13.5px; font-weight:600; letter-spacing:0.02em;
+    padding:14px 26px; border-radius:16px; }
+  .kakao-btn:active{ opacity:0.85; }
+  .kakao-btn svg{ width:19px; height:19px; }
 
-  /* small print for editable placeholders */
-  .todo{
-    color:#c98a5e; font-size:11px; font-style:italic;
+  footer{ background:var(--wine-deep); color:rgba(52,66,78,0.55); text-align:center; font-size:10.5px; letter-spacing:0.15em; padding:22px; }
+
+  .todo{ color:#e08a6f; font-size:11px; font-style:normal; }
+
+  /* ---------- COOL THEME (Location / Account) ---------- */
+  .cream{ background:#eef2f6 !important; }
+  .cream .eyebrow{ color:#4a7188; }
+  .cream h2{ color:#2b3843; }
+  .cream .venue-name{ color:#2b3843; }
+  .cream .venue-addr, .cream .venue-note{ color:#586a76; }
+  .cream .account-note{ color:#586a76; }
+
+  .map-box{
+    background:#dbe4ec; border-radius:16px; height:190px;
+    overflow:hidden; margin:20px 0;
   }
+  .map-box iframe{ width:100%; height:100%; border:0; filter:grayscale(0.05); }
+
+  .cream .map-links a{
+    background:#e1e9f0; border:none; color:#33414d;
+    border-radius:24px; padding:11px 20px; font-size:12.5px;
+  }
+  .cream .info-block h4{ color:#2b3843; }
+  .cream .info-block p{ color:#4f5e69; }
+  .cream .info-block ul{ list-style:none; margin:2px 0 10px; }
+  .cream .info-block li{ font-size:13px; line-height:1.95; color:#4f5e69; font-weight:400; padding-left:0; }
+  .cream .info-block li::before{ content:""; }
+  .cream .info-block .sub-title{ font-size:14px; color:#4a7188; margin:16px 0 5px; font-weight:700; }
+  .cream .info-block .sub-title:first-child{ margin-top:0; }
+  .icon-head{ display:flex; align-items:center; gap:8px; }
+  .icon-head .ic{ font-size:16px; }
+  .info-divider{ height:1px; background:#d8e0e8; margin:26px 0; }
+
+  .cream .acc-card{ background:#fff; border:none; border-top:1px solid #eef1f5; box-shadow:none; border-radius:0; margin:0; padding:22px 20px; }
+  .cream .acc-card:first-child{ border-top:none; }
+  .cream .acc-card .who{ color:#2b3843; }
+  .cream .acc-card .num{ color:#4f5e69; }
+  .cream .acc-card .copy-btn{ background:#e6edf3; color:#33414d; }
+  .cream .acc-card .copy-btn.copied{ background:#5a869c; color:#fff; }
+
+  .acc-group{ text-align:left; margin-bottom:12px; background:#fff; border:1px solid #e0e6ec; border-radius:16px; overflow:hidden; }
+  .acc-group summary{
+    list-style:none; cursor:pointer; outline:none;
+    background:#fff; padding:16px 18px;
+    font-size:14px; color:#2b3843; letter-spacing:0.02em;
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+    transition:background 0.15s ease;
+  }
+  .acc-group summary::-webkit-details-marker{ display:none; }
+  .acc-group summary:hover{ background:#f6f8fb; }
+  .acc-group[open] summary{ border-bottom:1px solid #e0e6ec; }
+  .acc-group summary .chev{ flex:0 0 auto; transition:transform 0.2s ease; color:#9fb2c0; }
+  .acc-group[open] summary .chev{ transform:rotate(180deg); }
+  .acc-group .acc-body{ padding:0; }
 </style>
 </head>
-<body>
+<body data-lang="jp">
 
-<div class="topbar"><span class="en">WE'RE GETTING MARRIED</span><span>≡</span></div>
+<div class="topbar">
+  <span class="brand en">W &amp; B</span>
+  <div class="lang-switch">
+    <button id="btn-jp" class="active" onclick="setLang('jp')">JP</button>
+    <button id="btn-kr" onclick="setLang('kr')">KR</button>
+  </div>
+</div>
 
 <!-- KV -->
 <div class="kv">
-  <img src="images/kv.jpg" alt="パク・ヨンジェ ＆ クォン・ナヒョン">
-  <div class="kv-eyebrow">CELEBRATE OUR LOVE</div>
-  <div class="kv-caption">
-    <div class="names en">パク・ヨンジェ <span class="amp">&amp;</span> クォン・ナヒョン</div>
-    <div class="sub">
-      2026年10月31日(土) 午後3時30分<br>
-      蔚山タニベイホテル
+  <img src="images/kv.jpg" alt="박영재 권나현">
+  <div class="kv-content">
+    <div class="kv-eyebrow en">celebrate our love</div>
+    <div class="kv-names en">PARK YOUNGJAE <span class="amp">&amp;</span> KWON NAHYUN</div>
+    <div class="kv-sub">
+      <span class="kr">2026년 10월 31일 (토) 오후 3시 30분<br>타니베이 호텔 해루홀</span>
+      <span class="jp">2026年10月31日(土) 午後3時30分<br>Tanibay Hotel &amp; Wedding ヘルホール</span>
     </div>
   </div>
 </div>
@@ -317,30 +290,35 @@
 <!-- INVITATION -->
 <section>
   <div class="eyebrow en">wedding invitation</div>
-  <h2>結婚いたします</h2>
+  <h2><span class="kr">결혼합니다</span><span class="jp">結婚いたします</span></h2>
   <p class="lead">
-    愛を育み、ひとつになろうとしています。<br>
-    これまで見守ってくださった皆様と<br>
-    親族の方々をお迎えし、誓いの言葉を交わします。<br>
-    ご多用中とは存じますが、ぜひご出席いただき<br>
-    温かく見守っていただけましたら<br>
-    この上ない喜びに存じます。
+    <span class="kr">
+      사랑으로 만나 하나가 되고자 합니다.<br>
+      아껴주신 어른들과 친지를 모시고<br>
+      서약을 맺으려 하니 바쁘신 중에도 오셔서<br>
+      축복해 주시면 더없는 기쁨이겠습니다.
+    </span>
+    <span class="jp">
+      愛を育み、ひとつになろうとしています。<br>
+      これまで見守ってくださった皆様と<br>
+      親族の方々をお迎えし、誓いの言葉を交わします。<br>
+      ご多用中とは存じますが、ぜひご出席いただき<br>
+      温かく見守っていただけましたら幸いです。
+    </span>
   </p>
   <div class="names-block">
-    新郎　パク・ヨンジェ<br>
-    新婦　クォン・ナヒョン
+    <span class="kr">박영재<br>권나현</span>
+    <span class="jp">新郎　パクヨンジェ<br>新婦　グォンナヒョン</span>
   </div>
 </section>
 
-<!-- DATE / CALENDAR -->
+<!-- DATE -->
 <section class="alt">
   <div class="date-num en">2026.10.31</div>
-  <div class="date-sub">土曜日 午後3時30分</div>
+  <div class="date-sub"><span class="kr">토요일 오후 3시 30분</span><span class="jp">土曜日 午後3時30分</span></div>
   <div class="divider"></div>
   <table class="cal">
-    <tr>
-      <th class="sat">日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="sat">土</th>
-    </tr>
+    <tr><th class="sat">S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th class="sat">S</th></tr>
     <tr><td></td><td></td><td></td><td class="sat">&nbsp;</td><td>1</td><td>2</td><td class="sat">3</td></tr>
     <tr><td class="sat">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td class="sat">10</td></tr>
     <tr><td class="sat">11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td class="sat">17</td></tr>
@@ -349,105 +327,214 @@
   </table>
 </section>
 
-<!-- INFO / SHUTTLE BUS -->
+<!-- SHUTTLE BUS -->
 <section>
   <div class="eyebrow en">wedding invitation</div>
-  <h2>ご案内</h2>
+  <h2><span class="kr">안내사항</span><span class="jp">ご案内</span></h2>
 
   <div class="card">
-    <div class="card-title">貸切バスのご案内</div>
-    <p>ソウルから会場までお越しいただく皆様のために、<br>貸切バスをご用意しました。<br>下記をご確認のうえご利用ください。</p>
+    <div class="card-title"><span class="kr">전세버스</span><span class="jp">貸切バスのご案内</span></div>
+    <p>
+      <span class="kr">서울에서 오시는 하객분들을 위해 전세버스를 준비했습니다.<br>이용하실 분은 신랑신부에게 연락주세요.</span>
+      <span class="jp">ソウルから会場までお越しいただく皆様のために、貸切バスをご用意しました。<br>ご利用希望の方は新郎新婦までご連絡ください。</span>
+    </p>
   </div>
 
   <div class="card">
-    <div class="card-title">往路バス</div>
-    <ul>
-      <li>出発時刻：9:00</li>
-      <li>出発場所：ハクトン（鶴洞）駅 6番出口</li>
-      <li>車両番号：京畿76자3097</li>
-    </ul>
+    <div class="card-title"><span class="kr">전세버스 시간표</span><span class="jp">貸切バス 時刻表</span></div>
+    <div class="bus-row">
+      <div class="bus-tag go"><span class="kr">출발</span><span class="jp">往路</span></div>
+      <ul>
+        <li><span class="kr">시간 : 9시 30분</span><span class="jp">時刻：9時30分</span></li>
+        <li><span class="kr">장소 : 학동역 6번출구</span><span class="jp">場所：ハクトン（鶴洞）駅 6番出口</span></li>
+        <li><span class="kr">차량번호 : 경기76자3097</span><span class="jp">車両番号：경기76자3097（キョンギ76ジャ3097）</span></li>
+      </ul>
+    </div>
+    <div class="bus-row">
+      <div class="bus-tag back"><span class="kr">도착</span><span class="jp">復路</span></div>
+      <ul>
+        <li><span class="kr">시간 : 5시 30분(예정)</span><span class="jp">時刻：17時30分（予定）</span></li>
+        <li><span class="kr">도착 장소 : 학동역</span><span class="jp">到着場所：ハクトン（鶴洞）駅</span></li>
+      </ul>
+    </div>
   </div>
 
   <div class="card">
-    <div class="card-title">復路バス</div>
-    <ul>
-      <li>出発時刻：17:30頃</li>
-    </ul>
+    <div class="card-title"><span class="kr">숙박</span><span class="jp">宿泊について</span></div>
+    <p>
+      <span class="kr">전날/당일 숙박하시는 분들은 신랑신부에게 연락 주시면 감사하겠습니다.</span>
+      <span class="jp">前日・当日にご宿泊予定の方は、新郎新婦までご連絡いただけますと幸いです。</span>
+    </p>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="alt">
   <div class="eyebrow en">wedding invitation</div>
-  <h2>お祝いのご連絡先</h2>
-  <div>
+  <h2><span class="kr">축하 연락처</span><span class="jp">お祝いのご連絡先</span></h2>
+
+  <div class="kr">
     <div class="contact-row">
-      <span>新婦　クォン・ナヒョン</span>
+      <span>신랑 박영재</span>
       <span class="icons"><a href="tel:" class="todo">☎</a><a href="sms:" class="todo">✉</a></span>
     </div>
     <div class="contact-row">
-      <span>新婦の父　クォン・チャンイル</span>
+      <span>혼주 권효주</span>
+      <span class="icons"><a href="tel:" class="todo">☎</a><a href="sms:" class="todo">✉</a></span>
+    </div>
+    <div class="contact-row">
+      <span>신부 권나현</span>
+      <span class="icons"><a href="tel:" class="todo">☎</a><a href="sms:" class="todo">✉</a></span>
+    </div>
+    <div class="contact-row">
+      <span>혼주 권창일</span>
       <span class="icons"><a href="tel:" class="todo">☎</a><a href="sms:" class="todo">✉</a></span>
     </div>
   </div>
-  <p class="todo" style="display:block;margin-top:14px;">※ 電話番号のリンク（tel:）は実際の番号に差し替えてください</p>
+
+  <div class="jp">
+    <div class="contact-row">
+      <span>新郎　パクヨンジェ</span>
+      <span class="icons"><a href="tel:07084623632">☎</a><a href="sms:07084623632">✉</a></span>
+    </div>
+    <div class="contact-row">
+      <span>新婦　グォンナヒョン</span>
+      <span class="icons"><a href="tel:09058943676">☎</a><a href="sms:09058943676">✉</a></span>
+    </div>
+  </div>
 </section>
 
 <!-- GALLERY -->
 <section>
   <div class="eyebrow en">wedding invitation</div>
-  <h2>ギャラリー</h2>
-  <div class="gallery">
-    <div class="cell">Photo</div>
-    <div class="cell">Photo</div>
-    <div class="cell">Photo</div>
-    <div class="cell">Photo</div>
-    <div class="cell">Photo</div>
-    <div class="cell">Photo</div>
+  <h2><span class="kr">갤러리</span><span class="jp">ギャラリー</span></h2>
+  <div class="gallery-grid">
+    <img src="images/gallery1.jpg" alt="gallery 1">
+    <img src="images/gallery2.jpg" alt="gallery 2">
+    <img src="images/gallery3.jpg" alt="gallery 3">
+    <img src="images/gallery4.jpg" alt="gallery 4">
+    <img src="images/gallery5.jpg" alt="gallery 5">
+    <img src="images/gallery6.jpg" alt="gallery 6">
+    <img src="images/gallery7.jpg" alt="gallery 7">
+    <img src="images/gallery8.jpg" alt="gallery 8">
+    <img src="images/gallery9.jpg" alt="gallery 9">
   </div>
-  <p class="todo" style="display:block;margin-top:14px;">※ ギャラリー写真は images フォルダに追加後、上のセルを &lt;img&gt; タグに差し替えてください</p>
 </section>
 
 <!-- LOCATION -->
-<section class="alt">
+<section class="cream">
   <div class="eyebrow en">wedding invitation</div>
-  <h2>アクセス</h2>
-  <div class="venue-name">蔚山タニベイホテル</div>
+  <h2><span class="kr">오시는 길</span><span class="jp">アクセス</span></h2>
+  <div class="venue-name"><span class="kr">타니베이 호텔 해루홀</span><span class="jp">Tanibay Hotel &amp; Wedding ヘルホール</span></div>
   <div class="venue-addr">울산 동구 해수욕장5길 43</div>
-  <div class="venue-note">（タクシー・ナビ入力の際は上記の韓国語住所をご利用ください）</div>
+  <div class="venue-note jp">（タクシー・ナビ入力の際は上記の韓国語住所をご利用ください）</div>
+
+  <div class="map-box">
+    <iframe src="https://maps.google.com/maps?q=%EC%9A%B8%EC%82%B0%20%EB%8F%99%EA%B5%AC%20%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A55%EA%B8%B8%2043&z=16&output=embed" loading="lazy" allowfullscreen></iframe>
+  </div>
 
   <div class="map-links">
-    <a href="https://maps.google.com/?q=울산+동구+해수욕장5길+43" target="_blank">Google Maps ↗</a>
-    <a href="https://map.naver.com/p/search/울산 동구 해수욕장5길 43" target="_blank">네이버 지도 ↗</a>
-    <a href="https://map.kakao.com/?q=울산 동구 해수욕장5길 43" target="_blank">카카오맵 ↗</a>
+    <span class="kr" style="display:contents">
+      <a href="https://map.naver.com/p/search/울산 동구 해수욕장5길 43" target="_blank">네이버 지도 ↗</a>
+      <a href="https://map.kakao.com/?q=울산 동구 해수욕장5길 43" target="_blank">카카오맵 ↗</a>
+      <a href="https://tmap.co.kr" target="_blank">티맵 ↗</a>
+    </span>
+    <span class="jp" style="display:contents">
+      <a href="https://maps.google.com/?q=울산+동구+해수욕장5길+43" target="_blank">Google Maps ↗</a>
+      <a href="https://map.naver.com/p/search/울산 동구 해수욕장5길 43" target="_blank">네이버 지도 ↗</a>
+    </span>
   </div>
 
   <div class="info-block">
-    <h4>■ 公共交通機関</h4>
-    <p>市外高速バスターミナルから<br>1411番（ヒュモンシアアパート下車 372m）</p>
-    <p>134, 711, 1134, 731番（イルサン海水浴場下車 663m）</p>
-    <p style="margin-top:10px;">蔚山駅（KTX）から<br>急行5002番（イルサン海水浴場下車 810m）</p>
-    <p style="margin-top:10px;">蔚山空港から<br>112, 122, 142番（テワンアム公園入口下車 663m）</p>
+    <h4 class="icon-head"><span class="ic">🚌</span><span class="kr">대중교통</span><span class="jp">公共交通機関</span></h4>
+
+    <div class="sub-title"><span class="kr">시외 고속버스 터미널</span><span class="jp">市外高速バスターミナル</span></div>
+    <ul>
+      <li><span class="kr">1411(휴먼시아아파트 하차 372m)</span><span class="jp">1411番（ヒュモンシアアパート下車 372m）</span></li>
+      <li><span class="kr">134, 711, 1134, 731(일산해수욕장 하차 663m)</span><span class="jp">134・711・1134・731番（イルサン海水浴場下車 663m）</span></li>
+    </ul>
+
+    <div class="sub-title"><span class="kr">울산역 KTX</span><span class="jp">蔚山駅（KTX）</span></div>
+    <ul>
+      <li><span class="kr">급행5002 (일산해수욕장 하차 810m)</span><span class="jp">急行5002番（イルサン海水浴場下車 810m）</span></li>
+    </ul>
+
+    <div class="sub-title"><span class="kr">울산공항</span><span class="jp">蔚山空港</span></div>
+    <ul>
+      <li><span class="kr">112, 122, 142 (대왕암공원입구 하차 663m)</span><span class="jp">112・122・142番（テワンアム公園入口下車 663m）</span></li>
+    </ul>
   </div>
 
+  <div class="info-divider"></div>
+
   <div class="info-block">
-    <h4>■ お車でお越しの方</h4>
-    <p>カーナビ検索：「タニベイホテル」または「울산 동구 해수욕장5길 43」</p>
-    <p style="margin-top:10px;">駐車：無料／ホテル駐車場をご利用いただけます</p>
+    <h4 class="icon-head"><span class="ic">🚗</span><span class="kr">자가용</span><span class="jp">お車でお越しの方</span></h4>
+    <p><span class="kr">네비게이션 : '타니베이 호텔' 또는 '울산 동구 해수욕장5길 43'</span>
+       <span class="jp">カーナビ検索：「Tanibay Hotel &amp; Wedding」または「울산 동구 해수욕장5길 43」</span></p>
+    <p style="margin-top:10px;"><span class="kr">① 타 지역 출발 시: 울산대교 고속도로 진입 → 염포산터널 출차 → 일산해수욕장 방향 직진<br>② 울산 시내 출발 시: 아산로 직진 → 방어동/일산해수욕장 방면 진입</span>
+       <span class="jp">①他地域から：蔚山大橋高速道路に進入 → 塩浦山トンネルを出て → イルサン海水浴場方面へ直進<br>②蔚山市内から：アサン路を直進 → バンオドン／イルサン海水浴場方面へ進入</span></p>
+    <p style="margin-top:10px;"><span class="kr">주차 안내 : 무료 / 호텔 주차장</span><span class="jp">駐車：無料／ホテル駐車場をご利用いただけます</span></p>
   </div>
 </section>
 
 <!-- ACCOUNT -->
-<section>
+<section class="cream">
   <div class="eyebrow en">account</div>
-  <h2>心ばかりのお祝いについて</h2>
+  <h2><span class="kr">마음 전하실 곳</span><span class="jp">心ばかりのお祝いについて</span></h2>
   <p class="account-note">
-    皆様にお越しいただけること自体が<br>
-    私たちにとって何よりの贈り物です。<br><br>
-    もしお気持ちをお寄せいただける場合は、<br>
-    お手数ですが下記よりお問い合わせください。
+    <span class="kr">참석이 어려우신 분들을 위해 기재했습니다<br>너그러운 마음으로 양해 부탁드립니다</span>
+    <span class="jp">やむを得ずご欠席の方のために記載いたしました<br>何卒ご理解のほどよろしくお願いいたします</span>
   </p>
-  <a href="#" class="account-btn todo">お振込先をお問い合わせ</a>
+
+  <div class="kr">
+    <details class="acc-group">
+      <summary>신랑측에게 <svg class="chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
+      <div class="acc-body">
+        <div class="acc-card">
+          <div><div class="who">신랑 박영재</div><div class="num">국민은행 924501-01-396805</div></div>
+          <button class="copy-btn" onclick="copyAccount(this, '924501-01-396805')" aria-label="계좌번호 복사">⧉</button>
+        </div>
+      </div>
+    </details>
+    <details class="acc-group">
+      <summary>신부측에게 <svg class="chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
+      <div class="acc-body">
+        <div class="acc-card">
+          <div><div class="who">신부 권나현</div><div class="num">토스뱅크 1001-6918-7679</div></div>
+          <button class="copy-btn" onclick="copyAccount(this, '1001-6918-7679')" aria-label="계좌번호 복사">⧉</button>
+        </div>
+        <div class="acc-card">
+          <div><div class="who">신부 아버지 권창일</div><div class="num">농협 815070-52-001398</div></div>
+          <button class="copy-btn" onclick="copyAccount(this, '815070-52-001398')" aria-label="계좌번호 복사">⧉</button>
+        </div>
+        <div class="acc-card">
+          <div><div class="who">신부 어머니 김은하</div><div class="num">하나은행 333-890062-03407</div></div>
+          <button class="copy-btn" onclick="copyAccount(this, '333-890062-03407')" aria-label="계좌번호 복사">⧉</button>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="jp">
+    <details class="acc-group">
+      <summary>新郎側へ <svg class="chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
+      <div class="acc-body">
+        <div class="acc-card">
+          <div><div class="who">新郎　パクヨンジェ</div><div class="num">ドコモ SMTB ネット銀行<br>メロン支店 (108) 普通2819454<br>PARK YOUNG JAE</div></div>
+          <button class="copy-btn" onclick="copyAccount(this, '2819454')" aria-label="口座番号をコピー">⧉</button>
+        </div>
+      </div>
+    </details>
+    <details class="acc-group">
+      <summary>新婦側へ <svg class="chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
+      <div class="acc-body">
+        <div class="acc-card">
+          <div><div class="who">新婦　グォンナヒョン</div><div class="num">SBI新生銀行<br>さくら支店 (300) 普通7341864</div></div>
+          <button class="copy-btn" onclick="copyAccount(this, '7341864')" aria-label="口座番号をコピー">⧉</button>
+        </div>
+      </div>
+    </details>
+  </div>
 </section>
 
 <!-- THANK YOU -->
@@ -456,7 +543,89 @@
   <div class="heart">♥</div>
 </div>
 
-<footer>WEDDING INVITATION</footer>
+<!-- SHARE -->
+<div class="share">
+  <button class="kakao-btn" onclick="shareInvitation()">
+    <svg viewBox="0 0 24 24" fill="#3a1d1d" aria-hidden="true"><path d="M12 3C6.48 3 2 6.62 2 11.05c0 2.86 1.9 5.37 4.76 6.79-.16.55-.9 3.1-.93 3.31 0 0-.02.15.08.21.1.06.22.01.22.01.29-.04 3.36-2.2 3.89-2.57.63.09 1.29.14 1.98.14 5.52 0 10-3.62 10-8.05C22 6.62 17.52 3 12 3z"/></svg>
+    <span class="kr">카카오톡으로 공유하기</span>
+    <span class="jp">カカオトークで共有</span>
+  </button>
+</div>
+
+<footer><span class="kr">WEDDING INVITATION</span><span class="jp">WEDDING INVITATION</span></footer>
+
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" crossorigin="anonymous"></script>
+<script>
+  /* ===== 공유 설정 : 배포 후 아래 값을 실제 값으로 교체하세요 =====
+     KAKAO_JS_KEY : 카카오 developers > 내 애플리케이션 > 앱 키 > JavaScript 키
+     SHARE_URL / SHARE_IMAGE : 실제 배포된 청첩장 주소(https 필수) */
+  const KAKAO_JS_KEY = 'YOUR_KAKAO_JAVASCRIPT_KEY';
+  const SHARE_URL   = 'https://nahyunkwon-830.github.io/wedding-invitation/wedding-jp/';
+  const SHARE_IMAGE = 'https://nahyunkwon-830.github.io/wedding-invitation/wedding-jp/images/kv.jpg';
+  const SHARE_TITLE = '박영재 ・ 권나현 결혼합니다';
+  const SHARE_DESC  = '2026년 10월 31일 (토) 오후 3시 30분\n타니베이 호텔 해루홀';
+
+  if(window.Kakao && KAKAO_JS_KEY.indexOf('YOUR_') !== 0 && !Kakao.isInitialized()){
+    Kakao.init(KAKAO_JS_KEY);
+  }
+
+  function shareInvitation(){
+    const url = (SHARE_URL.indexOf('YOUR-') === -1) ? SHARE_URL : location.href;
+    if(window.Kakao && Kakao.isInitialized && Kakao.isInitialized()){
+      Kakao.Share.sendDefault({
+        objectType:'feed',
+        content:{
+          title: SHARE_TITLE,
+          description: SHARE_DESC,
+          imageUrl: SHARE_IMAGE,
+          link:{ mobileWebUrl:url, webUrl:url }
+        },
+        buttons:[{ title:'청첩장 보기', link:{ mobileWebUrl:url, webUrl:url } }]
+      });
+      return;
+    }
+    if(navigator.share){
+      navigator.share({ title:SHARE_TITLE, text:'결혼식에 초대합니다', url:url }).catch(function(){});
+      return;
+    }
+    if(navigator.clipboard){ navigator.clipboard.writeText(url); alert('링크가 복사되었습니다.'); }
+  }
+
+  function setLang(lang){
+    document.body.setAttribute('data-lang', lang);
+    document.getElementById('btn-kr').classList.toggle('active', lang==='kr');
+    document.getElementById('btn-jp').classList.toggle('active', lang==='jp');
+  }
+
+  function copyAccount(btn, number){
+    const done = () => {
+      const original = btn.innerHTML;
+      btn.innerHTML = '✓';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.innerHTML = original;
+        btn.classList.remove('copied');
+      }, 1500);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(number).then(done).catch(() => fallbackCopy(number, done));
+    } else {
+      fallbackCopy(number, done);
+    }
+  }
+
+  function fallbackCopy(text, cb){
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { document.execCommand('copy'); cb(); } catch(e) {}
+    document.body.removeChild(ta);
+  }
+</script>
 
 </body>
 </html>

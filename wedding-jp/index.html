@@ -61,16 +61,7 @@
     padding:16px 22px; z-index:60;
     color:var(--kv-text);
   }
-  .topbar::before{
-    content:""; position:absolute; top:0; left:0; right:0; height:130px;
-    background: linear-gradient(180deg,
-      rgba(46,48,50,0.55) 0%,
-      rgba(46,48,50,0.42) 25%,
-      rgba(46,48,50,0.27) 50%,
-      rgba(46,48,50,0.12) 75%,
-      rgba(46,48,50,0) 100%);
-    z-index:-1; pointer-events:none;
-  }
+  .topbar::before{ display:none; }
   .brand{ font-family:"Cormorant Garamond", serif; font-style:normal; font-size:13px; letter-spacing:0.1em; opacity:0.9; text-shadow:0 1px 4px rgba(0,0,0,0.4); }
   .lang-switch{
     display:flex; background:rgba(46,48,50,0.45); border:1px solid rgba(247,242,234,0.7); border-radius:20px; overflow:hidden;

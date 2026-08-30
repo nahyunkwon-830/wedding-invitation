@@ -175,6 +175,10 @@
   /* grid gallery */
   .gallery-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:4px; margin-bottom:6px; }
   .gallery-grid img{ width:100%; aspect-ratio:3/4; object-fit:cover; display:block; cursor:zoom-in; }
+  .gallery-grid img.gallery-more{ display:none; }
+  .gallery-grid.expanded img.gallery-more{ display:block; }
+  .more-btn{ all:unset; cursor:pointer; display:inline-block; margin-top:14px; background:#fff; color:#33414d; font-size:12.5px; font-weight:500; padding:11px 26px; border-radius:24px; border:1px solid #cdd8e2; }
+  .more-btn:active{ opacity:0.8; }
   .lightbox{ display:none; position:fixed; inset:0; z-index:10000; background:rgba(22,26,30,0.94); align-items:center; justify-content:center; padding:16px; }
   .lightbox.open{ display:flex; }
   .lightbox img{ max-width:100%; max-height:100%; object-fit:contain; border-radius:4px; }
@@ -444,7 +448,14 @@
     <img src="images/gallery7.jpg" alt="gallery 7">
     <img src="images/gallery8.jpg" alt="gallery 8">
     <img src="images/gallery9.jpg" alt="gallery 9">
+    <img src="images/gallery10.jpg" alt="gallery 10" class="gallery-more">
+    <img src="images/gallery11.jpg" alt="gallery 11" class="gallery-more">
+    <img src="images/gallery12.jpg" alt="gallery 12" class="gallery-more">
+    <img src="images/gallery13.jpg" alt="gallery 13" class="gallery-more">
+    <img src="images/gallery14.jpg" alt="gallery 14" class="gallery-more">
+    <img src="images/gallery15.jpg" alt="gallery 15" class="gallery-more">
   </div>
+  <button class="more-btn" id="galleryMoreBtn" onclick="showMoreGallery()"><span class="kr">사진 더보기 +</span><span class="jp">もっと見る +</span></button>
 </section>
 
 <!-- LOCATION -->
@@ -683,6 +694,10 @@
   }
 
   // ---- Gallery lightbox ----
+  function showMoreGallery(){
+    var g = document.querySelector('.gallery-grid'); if(g){ g.classList.add('expanded'); }
+    var b = document.getElementById('galleryMoreBtn'); if(b){ b.style.display='none'; }
+  }
   var galleryImgs = Array.prototype.slice.call(document.querySelectorAll('.gallery-grid img'));
   var lbIndex = 0;
   function showLb(i){
